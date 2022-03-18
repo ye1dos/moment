@@ -211,7 +211,13 @@
             doy: 4, // The week that contains Jan 4th is the first week of the year.
         },
     });
-
+    if (moment.inp && moment.format === 'YYYY.MM.DD h:mm') {
+        let timeRus = moment.inp.slice(-2);
+        if (timeRus === 'PM') {
+            let time = Number(moment.inp.slice(-5).slice(0, 2)) + 12;
+            moment.inp = moment.inp.slice(-5) + time.toString();
+        }
+    }
     return ru;
 
 })));
