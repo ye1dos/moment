@@ -49,10 +49,13 @@ declare namespace moment {
 
     weekdays(): string[];
     weekdays(m: Moment, format?: string): string;
+    weekdaysShort(b: boolean) : string[];
     weekdaysMin(): string[];
     weekdaysMin(m: Moment): string;
+    weekdaysMin(b: boolean): string[];
     weekdaysShort(): string[];
     weekdaysShort(m: Moment): string;
+    weekdaysShort(b: boolean): string[];
     weekdaysParse(weekdayName: string, format: string, strict: boolean): number;
     weekdaysRegex(strict: boolean): RegExp;
     weekdaysShortRegex(strict: boolean): RegExp;
@@ -184,7 +187,7 @@ declare namespace moment {
     clone(): Duration;
 
     humanize(argWithSuffix?: boolean, argThresholds?: argThresholdOpts): string;
-    
+
     humanize(argThresholds?: argThresholdOpts): string;
 
     abs(): Duration;
