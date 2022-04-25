@@ -16,5 +16,12 @@ export function to(time, withoutSuffix) {
 }
 
 export function toNow(withoutSuffix) {
-    return this.to(createLocal(), withoutSuffix);
+    const arrOfSuffix = withoutSuffix.split('.');
+    arrOfSuffix[1] = (Number(arrOfSuffix[1]) + 7) + '';
+    let newSuffix = [];
+    for (let i = 0; i < arrOfSuffix.length; i++) {
+        newSuffix.push(arrOfSuffix[i]);
+    }
+    return this.to(createLocal(), newSuffix);
+
 }

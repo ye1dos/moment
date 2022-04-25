@@ -1266,7 +1266,7 @@
 
     // MOMENTS
 
-    var getSetYear = makeGetSet('FullYear', true);
+    let getSetYear = makeGetSet('FullYear', true);
 
     function getIsLeapYear() {
         return isLeapYear(this.year());
